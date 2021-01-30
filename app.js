@@ -2,7 +2,7 @@ import express from 'express';
 import {studentRouter} from './routes/studentRouter.js';
 import mongoose from 'mongoose';
 
-
+//conectando com o banco de dados
 (async () => {
   try {
   await mongoose.connect("mongodb+srv://kempsmm:kempsdata@bootcamp-fullstack.ldefx.mongodb.net/igti?retryWrites=true&w=majority" , {
