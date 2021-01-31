@@ -2,11 +2,13 @@ import express from 'express';
 import {studentModel} from '../models/studentModel.js';
 import mongoose from 'mongoose';
 
+require('dotenv').config();
+
 const app = express();
 
 (async () => {
   try {
-  await mongoose.connect("mongodb+srv://kempsmm:kempsdata@bootcamp-fullstack.ldefx.mongodb.net/igti?retryWrites=true&w=majority" , {
+  await mongoose.connect("mongodb+srv://"+process.env.USERDB+":"+process.env.PWDDB+"@bootcamp-fullstack.ldefx.mongodb.net/igti?retryWrites=true&w=majority" , {
    useNewUrlParser: true,
    useUnifiedTopology: true,
   });
