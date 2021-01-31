@@ -2,20 +2,20 @@ import express from 'express';
 import {studentModel} from '../models/studentModel.js';
 import mongoose from 'mongoose';
 
-require('dotenv').config();
+// require('dotenv').config();
 
 const app = express();
 
-(async () => {
-  try {
-  await mongoose.connect("mongodb+srv://"+process.env.USERDB+":"+process.env.PWDDB+"@bootcamp-fullstack.ldefx.mongodb.net/igti?retryWrites=true&w=majority" , {
-   useNewUrlParser: true,
-   useUnifiedTopology: true,
-  });
-  } catch (error) {
-    console.log('Erro ao conectar ao mongoDB' + error);
-  }
-})();
+// (async () => {
+//   try {
+//   await mongoose.connect("mongodb+srv://"+process.env.USERDB+":"+process.env.PWDDB+"@bootcamp-fullstack.ldefx.mongodb.net/igti?retryWrites=true&w=majority" , {
+//    useNewUrlParser: true,
+//    useUnifiedTopology: true,
+//   });
+//   } catch (error) {
+//     console.log('Erro ao conectar ao mongoDB' + error);
+//   }
+// })();
 
 //CREATE 
 app.post('/student', async (req, res) => {
