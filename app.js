@@ -4,8 +4,8 @@ import express from 'express';
 import {studentRouter} from './routes/studentRouter.js';
 import mongoose from 'mongoose';
 
-config().parsed['PORT'];
-
+//config().parsed['PORT', 'USERDB', 'PWDDB'];
+config();
 //utilizando o dotenv
 
 
